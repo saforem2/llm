@@ -3,8 +3,8 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ezpz"
-description = '2ez'
+name = "llm"
+description = 'LLMs'
 readme = "README.md"
 requires-python = ">=3.8"
 license = ""
@@ -58,16 +58,16 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/saforem2/ezpz"
-Issues = "https://github.com/saforem2/ezpz/issues"
-Source = "https://github.com/saforem2/ezpz"
+Documentation = "https://github.com/saforem2/llm"
+Issues = "https://github.com/saforem2/llm/issues"
+Source = "https://github.com/saforem2/llm"
 
 [tool.hatch.version]
-path = "src/ezpz/__about__.py"
+path = "src/llm/__about__.py"
 
 [tool.hatch.build]
 exclude = [
-  "src/ezpz/outputs/",
+  "src/llm/outputs/",
   "**old**",
 ]
 
@@ -78,7 +78,7 @@ allow-direct-references = true
 [tool.hatch.build.targets.sdist]
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/ezpz"]
+packages = ["src/llm"]
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -86,7 +86,7 @@ dependencies = [
   "pytest-cov",
 ]
 [tool.hatch.envs.default.scripts]
-cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/ezpz --cov=tests"
+cov = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=src/llm --cov=tests"
 no-cov = "cov --no-cov"
 
 [[tool.hatch.envs.test.matrix]]
@@ -96,7 +96,7 @@ python = ["38", "39", "310", "311"]
 branch = true
 parallel = true
 omit = [
-  "ezpz/__about__.py",
+  "llm/__about__.py",
 ]
 
 [tool.coverage.report]
