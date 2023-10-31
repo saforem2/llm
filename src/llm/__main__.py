@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """
-ezpz/__main__.py
+llm/__main__.py
 
 Contains main entry point for training.
 """

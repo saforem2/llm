@@ -1,5 +1,5 @@
 """
-ezpz/configs.py
+llm/configs.py
 """
 import os
 import json
@@ -44,7 +44,7 @@ BACKENDS = {
 
 
 def load_ds_config(fpath: Optional[os.PathLike] = None) -> dict:
-    cfgpath = Path(fpath)
+    cfgpath = Path(str(fpath))
     log.info(
         'Loading DeepSpeed config from: '
         f'{cfgpath.resolve().as_posix()}'
@@ -125,6 +125,12 @@ class BaseConfig(ABC):
     def __getitem__(self, key):
         return super().__getattribute__(key)
 
+
+
+@dataclass
+class DeepSpeedConfig(BaseConfig):
+    # TODO: Complete
+    pass
 
 
 
